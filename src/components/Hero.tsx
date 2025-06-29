@@ -88,7 +88,7 @@ const Hero = () => {
       </div>
 
       {/* Custom MailerLite styling */}
-      <style jsx>{`
+      <style>{`
         .ml-form-embed {
           background: white !important;
           border-radius: 1rem !important;
