@@ -1,33 +1,13 @@
 
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import MailerLiteModal from "./MailerLiteModal";
 
 const Hero = () => {
-  const [showMailerLite, setShowMailerLite] = useState(false);
-
-  useEffect(() => {
-    // Load MailerLite script
-    const script = document.createElement('script');
-    script.innerHTML = `
-      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account', '1628235');
-    `;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  const [showModal, setShowModal] = useState(false);
 
   const handleSignupClick = () => {
-    setShowMailerLite(true);
-    // Trigger MailerLite popup
-    if (window.ml) {
-      window.ml('show', 'form', '1628235');
-    }
+    setShowModal(true);
   };
 
   return (
@@ -67,7 +47,7 @@ const Hero = () => {
             onClick={handleSignupClick}
             className="bg-[#635DFF] hover:bg-[#635DFF]/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Start Your Journey - $5 Early Access
+            Get Notified - $5 Beta Access
           </Button>
         </div>
 
@@ -87,37 +67,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Custom MailerLite styling */}
-      <style>{`
-        .ml-form-embed {
-          background: white !important;
-          border-radius: 1rem !important;
-          border: none !important;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-        }
-        .ml-form-embed .ml-form-embedBody {
-          padding: 2rem !important;
-        }
-        .ml-form-embed .ml-form-embedSubmit .ml-form-embedSubmitContent {
-          background-color: #635DFF !important;
-          border-radius: 9999px !important;
-          padding: 1rem 2rem !important;
-          font-size: 1.125rem !important;
-        }
-        .ml-form-embed .ml-form-embedSubmit .ml-form-embedSubmitContent:hover {
-          background-color: rgba(99, 93, 255, 0.9) !important;
-        }
-        .ml-form-embed input[type="text"], .ml-form-embed input[type="email"] {
-          border-radius: 9999px !important;
-          border: 2px solid #e5e7eb !important;
-          padding: 0.75rem 1rem !important;
-          font-size: 1rem !important;
-        }
-        .ml-form-embed input[type="text"]:focus, .ml-form-embed input[type="email"]:focus {
-          border-color: #635DFF !important;
-          box-shadow: 0 0 0 3px rgba(99, 93, 255, 0.1) !important;
-        }
-      `}</style>
+      <MailerLiteModal 
+        isOpen={showModal} 
+        onClose={() => setShowModal(false)} 
+      />
     </section>
   );
 };

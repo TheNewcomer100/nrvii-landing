@@ -1,20 +1,20 @@
 
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { useState } from "react";
+import MailerLiteModal from "./MailerLiteModal";
 
 const EarlyAccess = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const benefits = [
-    "Exclusive early access to Nrvii",
+    "Exclusive beta access to Nrvii when ready",
     "Weekly founder updates and progress",
     "Input on features that matter to you",
     "Lifetime discount when we launch"
   ];
 
   const handleSignupClick = () => {
-    // Trigger MailerLite popup
-    if (window.ml) {
-      window.ml('show', 'form', '1628235');
-    }
+    setShowModal(true);
   };
 
   return (
@@ -33,7 +33,7 @@ const EarlyAccess = () => {
           <div className="relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Your $5 Gets You:
+                Your $5 Beta Gets You:
               </h2>
             </div>
 
@@ -53,7 +53,7 @@ const EarlyAccess = () => {
                 onClick={handleSignupClick}
                 className="bg-white text-[#635DFF] hover:bg-white/90 px-8 py-4 text-lg rounded-full font-semibold hover:scale-105 transition-all duration-300"
               >
-                Join Early Access - $5
+                Join Beta Waitlist - $5
               </Button>
               <p className="mt-4 text-white/80">
                 No spam. Your data is safe. Your journey matters.
@@ -62,6 +62,11 @@ const EarlyAccess = () => {
           </div>
         </div>
       </div>
+
+      <MailerLiteModal 
+        isOpen={showModal} 
+        onClose={() => setShowModal(false)} 
+      />
     </section>
   );
 };

@@ -1,12 +1,13 @@
 
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import MailerLiteModal from "./MailerLiteModal";
 
 const FinalCTA = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const handleSignupClick = () => {
-    // Trigger MailerLite popup
-    if (window.ml) {
-      window.ml('show', 'form', '1628235');
-    }
+    setShowModal(true);
   };
 
   return (
@@ -24,18 +25,18 @@ const FinalCTA = () => {
           
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Thrive as Your Full Self?
+              Ready to Be Among the First?
             </h2>
             
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of multi-passionate creators who are turning overwhelm into opportunity.
+              Join hundreds of multi-passionate creators on the waitlist for beta access.
             </p>
             
             <Button 
               onClick={handleSignupClick}
               className="bg-[#6FFFCB] text-[#23263A] hover:bg-[#6FFFCB]/90 px-8 py-4 text-lg rounded-full font-semibold mb-6 hover:scale-105 transition-all duration-300"
             >
-              Claim Your Spot - $5 Early Access
+              Get Notified - $5 Beta Access
             </Button>
             
             <p className="text-white/80">
@@ -44,6 +45,11 @@ const FinalCTA = () => {
           </div>
         </div>
       </div>
+
+      <MailerLiteModal 
+        isOpen={showModal} 
+        onClose={() => setShowModal(false)} 
+      />
     </section>
   );
 };
