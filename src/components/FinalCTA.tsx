@@ -12,35 +12,37 @@ const FinalCTA = () => {
 
   return (
     <section className="py-24 px-4 relative overflow-hidden">
-      {/* Dynamic Background Elements */}
-      <div className="absolute top-0 left-1/3 w-40 h-40 bg-[#635DFF]/10 rounded-full blur-2xl animate-pulse delay-500"></div>
-      <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-[#6FFFCB]/10 rounded-full blur-xl animate-bounce delay-200"></div>
-      <div className="absolute top-1/2 right-10 w-24 h-24 bg-[#E5E9FF]/20 rounded-full blur-lg animate-pulse delay-1000"></div>
-      
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="bg-gradient-to-br from-[#23263A] to-[#635DFF] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#6FFFCB]/20 rounded-full -translate-y-16 translate-x-16 animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#FF6F61]/20 rounded-full translate-y-12 -translate-x-12 animate-bounce delay-700"></div>
-          
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Be Among the First?
+              Your Multi-Passionate Journey Starts Here
             </h2>
             
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of multi-passionate creators on the waitlist for beta access.
+              Join 500+ creative minds who've found a productivity system that actually works 
+              for complex, neurodivergent brains. Lock in your beta access for just $5.
             </p>
             
-            <Button 
-              onClick={handleSignupClick}
-              className="bg-[#6FFFCB] text-[#23263A] hover:bg-[#6FFFCB]/90 px-8 py-4 text-lg rounded-full font-semibold mb-6 hover:scale-105 transition-all duration-300"
-            >
-              Get Notified - $5 Beta Access
-            </Button>
+            <div className="space-y-6">
+              <Button 
+                onClick={handleSignupClick}
+                className="bg-[#6FFFCB] text-[#23263A] hover:bg-[#6FFFCB]/90 px-8 py-4 text-lg rounded-full font-semibold hover:scale-105 transition-all duration-300"
+              >
+                Secure Your Spot - $5 Beta Access
+              </Button>
+              
+              <div className="flex items-center justify-center gap-6 text-sm text-white/80">
+                <span>✅ 30-day guarantee</span>
+                <span>✅ Lifetime discount</span>
+                <span>✅ Cancel anytime</span>
+              </div>
+            </div>
             
-            <p className="text-white/80">
-              Be among the first to experience productivity that doesn't sacrifice your soul.
+            <p className="text-white/70 mt-8">
+              Don't let another productivity system make you feel broken. 
+              <br />
+              <strong className="text-white">You're not scattered. You're multi-passionate.</strong>
             </p>
           </div>
         </div>

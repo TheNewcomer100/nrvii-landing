@@ -2,43 +2,41 @@
 const Benefits = () => {
   const benefits = [
     {
-      icon: "🌟",
-      title: "Multi-Passion Friendly",
-      description: "Track multiple projects without guilt or scattered focus"
-    },
-    {
-      icon: "🧠",
-      title: "Mental Health First",
-      description: "Built-in energy tracking and burnout prevention"
+      icon: "🎯",
+      title: "Multi-Project Dashboard", 
+      description: "See all your passions in one place without feeling scattered or overwhelmed by traditional single-focus tools"
     },
     {
       icon: "⚡",
-      title: "Smart Energy Management",
-      description: "Match tasks to your natural rhythms and capacity"
+      title: "Smart Energy Tracking",
+      description: "Work with your natural rhythms instead of against them—never burn out from pushing through low-energy periods again"
     },
     {
-      icon: "💫",
-      title: "Neurodivergent-Designed",
-      description: "ADHD-friendly interface with gentle reminders"
+      icon: "🧠", 
+      title: "ADHD-Friendly Design",
+      description: "Gentle reminders and dopamine-friendly progress tracking built specifically for neurodivergent minds"
+    },
+    {
+      icon: "🛡️",
+      title: "Burnout Prevention",
+      description: "Sustainable productivity that celebrates rest and recovery as essential parts of creative success"
     }
   ];
 
   return (
-    <section className="py-24 px-4 bg-white/50 relative overflow-hidden">
-      {/* Dynamic Background Elements */}
-      <div className="absolute top-0 left-0 w-40 h-40 bg-[#6FFFCB]/10 rounded-full blur-2xl animate-pulse delay-300"></div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#635DFF]/10 rounded-full blur-xl animate-bounce delay-1000"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[#FF6F61]/10 rounded-full blur-lg animate-pulse delay-700"></div>
-      
+    <section className="py-20 px-4 bg-white/50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#23263A] mb-4">
-            Finally, An App That Gets You
+          <h2 className="text-3xl md:text-4xl font-bold text-[#23263A] mb-6">
+            Finally, An App That Gets Your Multi-Passionate Mind
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#635DFF] to-[#6FFFCB] mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stop trying to fit into productivity systems built for single-focus people. 
+            Nrvii celebrates your complexity and helps you thrive with multiple interests.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
             <div 
               key={index}

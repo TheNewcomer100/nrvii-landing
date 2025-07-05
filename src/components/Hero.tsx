@@ -11,58 +11,127 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-32 px-4">
-      {/* Dynamic Background Elements */}
+    <section className="relative overflow-hidden pt-20 pb-16 px-4">
+      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#635DFF]/5 via-transparent to-[#6FFFCB]/5"></div>
-      <div className="absolute top-20 left-10 w-32 h-32 bg-[#E5E9FF] rounded-full blur-xl opacity-60 animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-24 h-24 bg-[#6FFFCB] rounded-full blur-lg opacity-40 animate-bounce"></div>
-      <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-[#FF6F61] rounded-full blur-md opacity-30 animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-[#635DFF] rounded-full blur-lg opacity-25 animate-bounce delay-500"></div>
       
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Logo */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/ec798f06-750b-4966-89d8-37640072fb5a.png" 
-            alt="Nrvii Logo" 
-            className="h-16 mx-auto"
-          />
-        </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="text-left">
+            {/* Logo */}
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/ec798f06-750b-4966-89d8-37640072fb5a.png" 
+                alt="Nrvii Logo" 
+                className="h-12"
+              />
+            </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl font-bold text-[#23263A] mb-6 leading-tight">
-          Turn Your Many Passions Into{" "}
-          <span className="text-[#635DFF]">Sustainable Success</span>
-        </h1>
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#23263A] mb-6 leading-tight">
+              Finally, A Productivity System That{" "}
+              <span className="text-[#635DFF]">Celebrates Your Multiple Passions</span>
+            </h1>
 
-        {/* Subheadline */}
-        <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          The first productivity app that celebrates your complexity. Track goals, manage energy, 
-          and thrive—without the overwhelm.
-        </p>
+            {/* Subheadline */}
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Stop feeling scattered. Nrvii helps multi-passionate creators track energy, 
+              manage multiple projects, and prevent burnout—without forcing you into a 
+              one-size-fits-all productivity box.
+            </p>
 
-        {/* Single CTA */}
-        <div className="flex justify-center mb-16">
-          <Button 
-            onClick={handleSignupClick}
-            className="bg-[#635DFF] hover:bg-[#635DFF]/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Get Notified - $5 Beta Access
-          </Button>
-        </div>
+            {/* Social Proof */}
+            <div className="flex items-center gap-6 mb-8">
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#635DFF] to-[#6FFFCB] rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#FF6F61] to-[#E5E9FF] rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#6FFFCB] to-[#635DFF] rounded-full border-2 border-white"></div>
+                </div>
+                <span className="text-sm text-gray-600 font-medium">500+ early adopters</span>
+              </div>
+              <div className="text-sm text-gray-600">
+                ⭐ Built by neurodivergent founders
+              </div>
+            </div>
 
-        {/* Hero Visual with Enhanced Animation */}
-        <div className="relative max-w-2xl mx-auto">
-          <div className="flex justify-center items-center space-x-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#635DFF] to-[#6FFFCB] rounded-2xl transform rotate-12 animate-pulse"></div>
-            <div className="w-12 h-12 bg-[#FF6F61] rounded-full transform -rotate-6 animate-bounce delay-200"></div>
-            <div className="w-20 h-20 bg-gradient-to-tr from-[#E5E9FF] to-[#6FFFCB] rounded-3xl transform rotate-6 animate-pulse delay-700"></div>
-            <div className="w-14 h-14 bg-[#635DFF] rounded-2xl transform -rotate-12 animate-bounce delay-300"></div>
+            {/* Primary CTA */}
+            <div className="space-y-4">
+              <Button 
+                onClick={handleSignupClick}
+                className="bg-[#635DFF] hover:bg-[#635DFF]/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Join 500+ Early Adopters - $5 Beta Access
+              </Button>
+              <p className="text-sm text-gray-500">
+                Less than a coffee per month • Cancel anytime • Early adopter pricing
+              </p>
+            </div>
           </div>
-          <div className="mt-8 flex justify-center">
-            <div className="w-2 h-2 bg-[#6FFFCB] rounded-full mx-1 animate-bounce"></div>
-            <div className="w-2 h-2 bg-[#635DFF] rounded-full mx-1 animate-bounce delay-100"></div>
-            <div className="w-2 h-2 bg-[#FF6F61] rounded-full mx-1 animate-bounce delay-200"></div>
+
+          {/* Right Column - Product Preview */}
+          <div className="relative">
+            {/* Main Product Screenshot Mockup */}
+            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-2xl p-6 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              {/* Mock Browser Header */}
+              <div className="flex items-center gap-2 mb-4 pb-4 border-b border-gray-200">
+                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <div className="ml-4 text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded">nrvii.app</div>
+              </div>
+              
+              {/* Mock Dashboard Content */}
+              <div className="space-y-4">
+                {/* Header */}
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-gray-800">Today's Energy: 75%</h3>
+                  <div className="w-16 h-2 bg-[#6FFFCB] rounded-full"></div>
+                </div>
+                
+                {/* Projects */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 bg-[#635DFF]/10 rounded-lg">
+                    <div className="w-3 h-3 bg-[#635DFF] rounded-full"></div>
+                    <span className="text-sm font-medium">Photography Course</span>
+                    <div className="ml-auto text-xs text-gray-500">2h today</div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-[#6FFFCB]/10 rounded-lg">
+                    <div className="w-3 h-3 bg-[#6FFFCB] rounded-full"></div>
+                    <span className="text-sm font-medium">Music Production</span>
+                    <div className="ml-auto text-xs text-gray-500">1h today</div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-[#FF6F61]/10 rounded-lg">
+                    <div className="w-3 h-3 bg-[#FF6F61] rounded-full"></div>
+                    <span className="text-sm font-medium">Side Business</span>
+                    <div className="ml-auto text-xs text-gray-500">30m today</div>
+                  </div>
+                </div>
+                
+                {/* Energy Chart */}
+                <div className="mt-6">
+                  <div className="text-xs text-gray-500 mb-2">Weekly Energy Patterns</div>
+                  <div className="flex items-end gap-1 h-12">
+                    <div className="w-4 bg-[#635DFF]/30 h-8 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF]/60 h-10 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF] h-12 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF]/80 h-9 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF]/40 h-6 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF]/70 h-11 rounded-sm"></div>
+                    <div className="w-4 bg-[#635DFF]/90 h-10 rounded-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature Callouts */}
+            <div className="absolute -left-4 top-1/4 bg-white rounded-lg shadow-lg p-3 transform -rotate-6 animate-pulse">
+              <div className="text-xs font-medium text-[#635DFF]">✨ Multi-project tracking</div>
+            </div>
+            <div className="absolute -right-4 bottom-1/4 bg-white rounded-lg shadow-lg p-3 transform rotate-6 animate-pulse delay-500">
+              <div className="text-xs font-medium text-[#6FFFCB]">🧠 Energy management</div>
+            </div>
           </div>
         </div>
       </div>
