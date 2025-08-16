@@ -51,12 +51,16 @@ const Hero = () => {
               <Button 
                 className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={() => {
+                  console.log('Button clicked, checking MailerLite...');
                   if (typeof window !== 'undefined' && (window as any).ml) {
+                    console.log('MailerLite found, showing form');
                     (window as any).ml('show', '2ZYZaB');
+                  } else {
+                    console.log('MailerLite not found');
                   }
                 }}
               >
-                Join the Waitlist - Early Access
+                Get Notified – $5 Beta Access
               </Button>
             </div>
           </div>
