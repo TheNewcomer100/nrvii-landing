@@ -33,9 +33,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8">
-          <p className="text-gray-400">
-            © 2024 Nrvii. All rights reserved. Your complexity is your superpower.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400">
+              © 2024 Nrvii. All rights reserved. Your complexity is your superpower.
+            </p>
+            <a 
+              href="#privacy" 
+              className="text-gray-400 hover:text-nrvii-mint transition-colors text-sm underline"
+            >
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -15,7 +15,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "When will Nrvii be available?",
-      answer: "We're launching beta access in early 2025. Join the waitlist for priority access and updates."
+      answer: "Nrvii is launching soon—join the waitlist to shape the product and get first access."
     },
     {
       question: "How is this different from other productivity apps?",

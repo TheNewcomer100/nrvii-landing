@@ -1,14 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import MailerLiteModal from "./MailerLiteModal";
 
 const Hero = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleSignupClick = () => {
-    setShowModal(true);
-  };
 
   return (
     <section className="relative overflow-hidden pt-20 pb-16 px-4">
@@ -49,34 +42,21 @@ const Hero = () => {
                   <div className="w-8 h-8 bg-gradient-to-br from-nrvii-coral to-nrvii-lilac rounded-full border-2 border-white"></div>
                   <div className="w-8 h-8 bg-gradient-to-br from-nrvii-mint to-nrvii-indigo rounded-full border-2 border-white"></div>
                 </div>
-                <span className="text-sm text-gray-600 font-medium">Built by neurodivergent founders</span>
+                <span className="text-sm text-gray-600 font-medium">Built by neurodivergent founder</span>
               </div>
             </div>
 
             {/* Primary CTA */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               <Button 
-                onClick={handleSignupClick}
                 className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Join the Waitlist - Early Access
               </Button>
               
-              {/* Email Signup Form */}
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    placeholder="your.email@example.com"
-                    className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nrvii-indigo/50 focus:border-nrvii-indigo"
-                  />
-                  <button
-                    onClick={handleSignupClick}
-                    className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-6 py-3 rounded-xl font-medium transition-colors whitespace-nowrap"
-                  >
-                    Get Early Access
-                  </button>
-                </div>
+              {/* MailerLite Embedded Form */}
+              <div className="mailerlite-form-container">
+                <div className="ml-embedded" data-form="2ZYZaB"></div>
               </div>
             </div>
           </div>
@@ -147,10 +127,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <MailerLiteModal 
-        isOpen={showModal} 
-        onClose={() => setShowModal(false)} 
-      />
     </section>
   );
 };
