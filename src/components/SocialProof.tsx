@@ -25,28 +25,12 @@ const SocialProof = () => {
           </div>
         </div>
 
-        {/* Trust Elements */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-[#E5E9FF] rounded-2xl flex items-center justify-center mb-4 text-2xl">
-              👥
-            </div>
-            <p className="font-semibold text-[#23263A]">Trusted by 500+ early users</p>
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-[#E5E9FF] rounded-2xl flex items-center justify-center mb-4 text-2xl">
-              ⭐
-            </div>
-            <p className="font-semibold text-[#23263A]">Featured in productivity communities</p>
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-[#E5E9FF] rounded-2xl flex items-center justify-center mb-4 text-2xl">
-              🧠
-            </div>
-            <p className="font-semibold text-[#23263A]">Built by neurodivergent founders</p>
-          </div>
+        {/* Research Stat */}
+        <div className="bg-nrvii-lilac/30 rounded-2xl p-8 text-center">
+          <p className="text-lg text-nrvii-slate font-medium mb-2">
+            Research shows 73% of creative professionals have 3+ active passion projects, yet 89% of productivity tools are built for single-focus users.
+          </p>
+          <cite className="text-sm text-gray-600">Creative Professional Survey, 2024</cite>
         </div>
       </div>
     </section>

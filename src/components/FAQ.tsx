@@ -14,36 +14,20 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Is this another productivity app trying to optimize my life?",
-      answer: "Absolutely not. We're anti-optimization. Nrvii is designed to work WITH your natural rhythms and multiple interests, not force you into a rigid system that makes you feel broken when you can't stick to it."
+      question: "When will Nrvii be available?",
+      answer: "We're launching beta access in early 2025. Join the waitlist for priority access and updates."
     },
     {
-      question: "What if I have ADHD or other neurodivergent traits?",
-      answer: "Nrvii was designed BY neurodivergent founders FOR neurodivergent minds. We understand executive function challenges, hyperfocus cycles, and the need for dopamine-friendly progress tracking. Every feature is built with ADHD, autism, and other neurodivergent experiences in mind."
+      question: "How is this different from other productivity apps?",
+      answer: "Most apps force you to pick one focus. Nrvii celebrates your multiple interests and helps you make progress without burnout."
     },
     {
-      question: "I've tried everything. How is this different?",
-      answer: "Most productivity apps are built for neurotypical, single-focus users. Nrvii celebrates your complexity instead of trying to fix it. We focus on sustainable success through energy management, not hustle culture productivity hacks."
+      question: "Is there a free version?",
+      answer: "Yes! We'll have a free tier for basic project tracking, with premium features for advanced energy management and AI suggestions."
     },
     {
-      question: "What happens after I pay the $5?",
-      answer: "You'll get immediate access to our beta community and regular updates on development progress. When the app launches, you'll be among the first to get access, plus you'll lock in a lifetime 50% discount on the monthly subscription."
-    },
-    {
-      question: "Can I get a refund if it's not for me?",
-      answer: "Yes! We offer a 30-day money-back guarantee. If Nrvii doesn't feel right for your brain, just email us and we'll refund your $5 immediately, no questions asked."
-    },
-    {
-      question: "When will the full app be ready?",
-      answer: "We're aiming for early 2025. Beta testers will get regular updates and early access to new features as we build them. Your feedback directly shapes what we prioritize."
-    },
-    {
-      question: "Will this work if I'm not 'multi-passionate'?",
-      answer: "If you have more than one interest, hobby, or project (even if it's work + one side thing), Nrvii can help. You don't need to identify as 'multi-passionate' – you just need to feel overwhelmed by traditional productivity advice."
-    },
-    {
-      question: "What about my data and privacy?",
-      answer: "Your data is yours. We'll never sell your information or use it for advertising. All data is encrypted and stored securely. You can export or delete your data anytime."
+      question: "Who is this for?",
+      answer: "Multi-passionate creators, neurodivergent individuals, and anyone juggling multiple projects who's tired of feeling 'broken' for not having one singular focus."
     }
   ];
 

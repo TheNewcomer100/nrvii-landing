@@ -22,16 +22,16 @@ const Hero = () => {
             {/* Logo */}
             <div className="mb-8">
               <img 
-                src="/lovable-uploads/ec798f06-750b-4966-89d8-37640072fb5a.png" 
+                src="/lovable-uploads/4f1954dd-3c6f-47b3-bb36-505f1b02891d.png" 
                 alt="Nrvii Logo" 
                 className="h-12"
               />
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#23263A] mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-nrvii-slate mb-6 leading-tight">
               Finally, A Productivity System That{" "}
-              <span className="text-[#635DFF]">Celebrates Your Multiple Passions</span>
+              <span className="text-nrvii-indigo">Celebrates Your Multiple Passions</span>
             </h1>
 
             {/* Subheadline */}
@@ -45,14 +45,11 @@ const Hero = () => {
             <div className="flex items-center gap-6 mb-8">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#635DFF] to-[#6FFFCB] rounded-full border-2 border-white"></div>
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#FF6F61] to-[#E5E9FF] rounded-full border-2 border-white"></div>
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#6FFFCB] to-[#635DFF] rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-nrvii-indigo to-nrvii-mint rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-nrvii-coral to-nrvii-lilac rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-nrvii-mint to-nrvii-indigo rounded-full border-2 border-white"></div>
                 </div>
-                <span className="text-sm text-gray-600 font-medium">500+ early adopters</span>
-              </div>
-              <div className="text-sm text-gray-600">
-                ⭐ Built by neurodivergent founders
+                <span className="text-sm text-gray-600 font-medium">Built by neurodivergent founders</span>
               </div>
             </div>
 
@@ -60,13 +57,27 @@ const Hero = () => {
             <div className="space-y-4">
               <Button 
                 onClick={handleSignupClick}
-                className="bg-[#635DFF] hover:bg-[#635DFF]/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                Join 500+ Early Adopters - $5 Beta Access
+                Join the Waitlist - Early Access
               </Button>
-              <p className="text-sm text-gray-500">
-                Less than a coffee per month • Cancel anytime • Early adopter pricing
-              </p>
+              
+              {/* Email Signup Form */}
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="your.email@example.com"
+                    className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nrvii-indigo/50 focus:border-nrvii-indigo"
+                  />
+                  <button
+                    onClick={handleSignupClick}
+                    className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-6 py-3 rounded-xl font-medium transition-colors whitespace-nowrap"
+                  >
+                    Get Early Access
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
