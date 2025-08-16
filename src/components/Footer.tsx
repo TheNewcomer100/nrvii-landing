@@ -11,6 +11,9 @@ const Footer = () => {
         <p className="text-gray-300 mb-6">
           Built with ❤️ for the multi-passionate community
         </p>
+        <p className="text-gray-300 mb-6">
+          Contact: <a href="mailto:Nrvii.HQ@gmail.com" className="hover:text-nrvii-mint transition-colors">Nrvii.HQ@gmail.com</a>
+        </p>
         
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-8">
@@ -38,7 +41,9 @@ const Footer = () => {
               © 2024 Nrvii. All rights reserved. Your complexity is your superpower.
             </p>
             <a 
-              href="#privacy" 
+              href="https://docs.google.com/document/d/1DuhLKKtD2k41l2TF3EVn1jsRTPHC5EVYtRowwd48jxc/edit?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-nrvii-mint transition-colors text-sm underline"
             >
               Privacy Policy

@@ -60,7 +60,7 @@ const Hero = () => {
                   }
                 }}
               >
-                Get Notified – $5 Beta Access
+                Join the Waitlist – Early Access
               </Button>
             </div>
           </div>
