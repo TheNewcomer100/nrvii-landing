@@ -50,14 +50,14 @@ const Hero = () => {
             <div className="space-y-6">
               <Button 
                 className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).ml) {
+                    (window as any).ml('show', '2ZYZaB');
+                  }
+                }}
               >
                 Join the Waitlist - Early Access
               </Button>
-              
-              {/* MailerLite Embedded Form */}
-              <div className="mailerlite-form-container">
-                <div className="ml-embedded" data-form="2ZYZaB"></div>
-              </div>
             </div>
           </div>
 
