@@ -2,6 +2,48 @@
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleWaitlistClick = () => {
+    console.log('Waitlist button clicked');
+    
+    // Function to attempt showing the popup
+    const tryShowPopup = () => {
+      if (typeof window !== 'undefined' && (window as any).ml) {
+        console.log('MailerLite found, attempting to show popup');
+        try {
+          // Try the exact syntax from MailerLite documentation
+          (window as any).ml('show', '2ZYZaB', true);
+          console.log('Popup show command executed');
+        } catch (error) {
+          console.error('Error showing popup:', error);
+        }
+      } else {
+        console.log('MailerLite not ready yet');
+        return false;
+      }
+      return true;
+    };
+
+    // Try immediately first
+    if (!tryShowPopup()) {
+      console.log('MailerLite not ready, waiting...');
+      
+      // Wait a bit and try again
+      setTimeout(() => {
+        if (!tryShowPopup()) {
+          console.log('Second attempt failed, trying one more time...');
+          
+          // Final attempt after a longer wait
+          setTimeout(() => {
+            if (!tryShowPopup()) {
+              console.error('MailerLite failed to load after multiple attempts');
+              // Fallback: could redirect to a signup page or show error
+              alert('Sorry, there was an issue loading the signup form. Please try refreshing the page.');
+            }
+          }, 1000);
+        }
+      }, 500);
+    }
+  };
 
   return (
     <section className="relative overflow-hidden pt-20 pb-16 px-4">
@@ -50,15 +92,7 @@ const Hero = () => {
             <div className="space-y-6">
               <Button 
                 className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                onClick={() => {
-                  console.log('Button clicked, checking MailerLite...');
-                  if (typeof window !== 'undefined' && (window as any).ml) {
-                    console.log('MailerLite found, showing form');
-                    (window as any).ml('show', '2ZYZaB');
-                  } else {
-                    console.log('MailerLite not found');
-                  }
-                }}
+                onClick={handleWaitlistClick}
               >
                 Join the Waitlist – Early Access
               </Button>

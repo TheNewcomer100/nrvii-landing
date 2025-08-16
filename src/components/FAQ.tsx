@@ -72,17 +72,6 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-
-        {/* Still have questions CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
-          <a 
-            href="mailto:hello@nrvii.com" 
-            className="text-[#635DFF] hover:text-[#635DFF]/80 font-medium underline"
-          >
-            Email us directly - we actually respond!
-          </a>
-        </div>
       </div>
     </section>
   );
