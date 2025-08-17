@@ -61,6 +61,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        nrvii: {
+          indigo: "#635DFF",
+          mint: "#6FFFCB",
+          coral: "#FF6F61",
+          lilac: "#C8A8E9",
+          slate: "#1A202C",
+        },
       },
       keyframes: {
         "accordion-down": {

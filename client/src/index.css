@@ -103,8 +103,5 @@ body {
   @apply bg-background text-foreground;
 }
 
-/* CSS failsafe to hide any inline MailerLite forms */
-.ml-embedded[data-form="2ZYZaB"] {
-  display: none !important;
-}
+
 }

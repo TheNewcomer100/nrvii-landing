@@ -1,49 +1,7 @@
 
-import { Button } from "@/components/ui/button";
+
 
 const Hero = () => {
-  const handleWaitlistClick = () => {
-    console.log('Waitlist button clicked');
-    
-    // Function to attempt showing the popup
-    const tryShowPopup = () => {
-      if (typeof window !== 'undefined' && (window as any).ml) {
-        console.log('MailerLite found, attempting to show popup');
-        try {
-          // Try the exact syntax from MailerLite documentation
-          (window as any).ml('show', '2ZYZaB', true);
-          console.log('Popup show command executed');
-        } catch (error) {
-          console.error('Error showing popup:', error);
-        }
-      } else {
-        console.log('MailerLite not ready yet');
-        return false;
-      }
-      return true;
-    };
-
-    // Try immediately first
-    if (!tryShowPopup()) {
-      console.log('MailerLite not ready, waiting...');
-      
-      // Wait a bit and try again
-      setTimeout(() => {
-        if (!tryShowPopup()) {
-          console.log('Second attempt failed, trying one more time...');
-          
-          // Final attempt after a longer wait
-          setTimeout(() => {
-            if (!tryShowPopup()) {
-              console.error('MailerLite failed to load after multiple attempts');
-              // Fallback: could redirect to a signup page or show error
-              alert('Sorry, there was an issue loading the signup form. Please try refreshing the page.');
-            }
-          }, 1000);
-        }
-      }, 500);
-    }
-  };
 
   return (
     <section className="relative overflow-hidden pt-20 pb-16 px-4">
@@ -59,7 +17,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/4f1954dd-3c6f-47b3-bb36-505f1b02891d.png" 
                 alt="Nrvii Logo" 
-                className="h-12"
+                className="h-20"
               />
             </div>
 
@@ -90,12 +48,14 @@ const Hero = () => {
 
             {/* Primary CTA */}
             <div className="space-y-6">
-              <Button 
-                className="bg-nrvii-indigo hover:bg-nrvii-indigo/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                onClick={handleWaitlistClick}
+              <a
+                href="https://dashboard.mailerlite.com/forms/1628235/158516784618538852/share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#6C63FF] hover:bg-purple-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-medium"
               >
                 Join the Waitlist – Early Access
-              </Button>
+              </a>
             </div>
           </div>
 
