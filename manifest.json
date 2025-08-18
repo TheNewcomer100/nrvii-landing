@@ -1,0 +1,20 @@
+{
+  "name": "Nrvii - Productivity System for Multi-Passionate Creators",
+  "short_name": "Nrvii",
+  "description": "Finally, a productivity system that celebrates your multiple passions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6C63FF",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "lifestyle", "business"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "scope": "/",
+  "prefer_related_applications": false
+}
