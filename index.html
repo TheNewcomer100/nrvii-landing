@@ -24,9 +24,25 @@
     <meta name="twitter:title" content="Nrvii - Productivity System for Multi-Passionate Creators" />
     <meta name="twitter:description" content="Finally, a productivity system that celebrates your multiple passions. Join the waitlist for early access." />
     
-    <!-- Favicon and Manifest -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
+    <!-- Favicons for Light Mode -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-nrvii-full-light-32.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-nrvii-full-light-16.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/favicon-nrvii-full-light.svg" media="(prefers-color-scheme: light)">
+
+    <!-- Favicons for Dark Mode -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-nrvii-N-dark-32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-nrvii-N-dark-16.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/favicon-nrvii-N-dark.svg" media="(prefers-color-scheme: dark)">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-nrvii-full-light.png" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-nrvii-N-dark.png" media="(prefers-color-scheme: dark)">
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/mstile-nrvii-full-light.png">
+    <meta name="msapplication-TileColor" content="#f5f2fa">
+
+    <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
     
     <!-- Canonical URL -->
@@ -300,11 +316,28 @@
     <!-- Ko-fi Widget -->
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
-      kofiWidgetOverlay.draw('nrvii', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support me',
-        'floating-chat.donateButton.background-color': '#ffffff',
-        'floating-chat.donateButton.text-color': '#323842'
+      // Ensure Ko-fi widget loads properly
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof kofiWidgetOverlay !== 'undefined') {
+          kofiWidgetOverlay.draw('nrvii', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#ffffff',
+            'floating-chat.donateButton.text-color': '#323842'
+          });
+        } else {
+          // Retry after a short delay if the widget isn't loaded yet
+          setTimeout(function() {
+            if (typeof kofiWidgetOverlay !== 'undefined') {
+              kofiWidgetOverlay.draw('nrvii', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': 'Support me',
+                'floating-chat.donateButton.background-color': '#ffffff',
+                'floating-chat.donateButton.text-color': '#323842'
+              });
+            }
+          }, 1000);
+        }
       });
     </script>
   </body>
